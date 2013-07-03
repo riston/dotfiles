@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# Startup volume
+pactl set-sink-volume 0 '20%' &
+
+# Keybord layout setting
+#setxkbmap -layout et,us -option grp:shift_shift_toggle &
+
+# DPMS monitor setting (standby -> suspend -> off) (seconds)
+xset dpms 300 600 900 &
+
+# Clipboard manager
+LC_ALL=C parcellite &
+
+# OSD
+dunst &

@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/rita'
+let g:netrw_dirhist_2='/home/rita/www'
+let g:netrw_dirhist_3='/home/rita/www/zf'
+let g:netrw_dirhist_4='/home/rita/www/zf/quickstart'
+let g:netrw_dirhist_5='/home/rita/www/zf'
+let g:netrw_dirhist_6='/home/rita/www/zf/quickstart'
