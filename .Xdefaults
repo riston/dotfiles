@@ -1,39 +1,46 @@
-! Mashup colors
-*foreground:        #B2A191
-*background:        #171717
-*borderColor:       #171717
-*cursorColor:       #C7A551
-!black
-*color0:            #202020
-*color8:            #404040
-!red
-*color1:            #BF3F34
-*color9:            #FF6C5F
-!green
-*color2:            #707D22
-*color10:           #B8CA4B
-!yellow
-*color3:            #BF7A29
-*color11:           #C7A551
-!blue
-*color4:            #627A92
-*color12:           #95B9DE
-!magenta
-*color5:            #75507B
-*color13:           #AD7FA8
-!cyan
-*color6:            #757978
-*color14:           #9FA590
-!white
-*color7:            #B2A191
-*color15:           #E8D0C3
+! Font config
 
-URxvt*foreground:White
-URxvt*background:Black
+Xft.autohint: 0
+Xft.antialias: 1
+Xft.hinting: true
+Xft.hintstyle: hintslight
+Xft.dpi: 96
+Xft.rgba: rgb
+Xft.lcdfilter: lcddefault
+
+*background: #000000
+*foreground: #F2F3F4
+
+!black
+*color0:			#242424
+*color8:			#000000
+!red
+*color1:			#FF0090
+*color9:			#FF0000
+!green
+*color2:			#A7FC00
+*color10:			#00FF00
+!yellow->orange
+*color3:			#FF5A36
+*color11:			#FF4500
+!blue
+*color4:			#007BA7
+*color12:			#1E90FF
+!magenta
+*color5:			#9966CC
+*color13:			#8F00FF
+!cyan->gray
+*color6:		 	#91A3B0
+*color14:			#536878
+!white
+*color7:			#F0EAD6
+*color15:			#F8F8FF
 
 ! fonts
 ! run "fc-list" for a list of available fonts
-URxvt*font: xft:terminus-font:size-9
+!URxvt*font: xft:terminus-font:size-11
+URxvt*font: xft:monospace:size=9
+URxvt.letterSpace: -2
 
 urxvt.termName: xterm-256color
 urxvt.scrollBar: false
@@ -43,7 +50,6 @@ urxvt.saveLines: 512
 urxvt.geometry: 90x25
 urxvt.boldMode: false
 urxvt.inheritPixmap: false
-urxvt.xftAntialias: false
 urxvt.jumpScroll: true
 urxvt.tintColor: white
 URxvt*internalBorder: 3
@@ -56,3 +62,5 @@ urxvt.colorIT: #bbbbbb
 urxvt.colorUL: #999999
 urxvt.underlineColor: #999999
 urxvt.borderless: true
+
+

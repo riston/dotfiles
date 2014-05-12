@@ -1,0 +1,48 @@
+background        no
+out_to_console    yes
+out_to_x      no
+update_interval   5
+total_run_times   0
+short_units   yes
+pad_percents      3
+
+override_utf8_locale yes
+
+TEXT
+,[
+ {
+    "full_text":
+      ${if_existing /proc/net/route wlan0}
+        "≈ ${wireless_essid wlan0}[${wireless_link_qual_perc wlan0}%] ↓ ${downspeed wlan0}/s ↑ ${upspeed wlan0}/s"
+      ${else}
+        "↓ ${downspeed eth0}/s ↑ ${upspeed eth0}/s"
+      ${endif},
+    "min_width":
+      ${if_existing /proc/net/route wlan0}
+        270
+      ${else}
+        140
+      ${endif},
+    "align": "center",
+    "color": "\#4E9FB1"
+  },
+  {"full_text": " ❤ ${exec sensors | grep ^"Physical id 0:" | awk '{print $4}'} [$cpu%] ","color": "\#DC322F"},
+  {"full_text": " ≣ [$mem] ", "color":"\#B58900"},
+  {
+    "full_text": "ϟ ${battery_percent BAT0}%",
+    "min_width": 55,
+    "align": "center",
+    "color":
+     ${if_match ${battery_percent BAT0}>=95}
+       "\#268BD2"
+     ${else}
+        ${if_match ${battery_percent BAT0}>=25}
+          "\#4E9FB1"
+        ${else}
+          "\#E84F4F"
+        ${endif}
+     ${endif}
+  },
+  #{"full_text": " ♪ [$mixer%] ", "color":"\#268BD2"},
+  {"full_text": " ${time %a %d %b} ${time %H:%M} "}
+]

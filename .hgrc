@@ -1,0 +1,22 @@
+[ui]
+username = Risto Novik <risto@deekit.com>
+verbose = True
+ssh = ssh -C
+
+[extensions]
+hgflow = /home/risto/hgflow.py
+hgk=
+
+[extdiff]  
+cmd.kdiff3 =
+
+[merge-tools]  
+KDIFF3.ARGS = $BASE $LOCAL $OPTHER -O $OUTPUT
+
+[color]
+status.modified = blue bold underline red_background
+status.added = green bold
+status.removed = red bold blue_background
+status.deleted = cyan bold underline
+status.unknown = magenta bold underline
+status.ignored = black bold

@@ -1,12 +1,12 @@
 ! font settings --------------------------------------------------------------
 
-Xft.autohint: true
-Xft.antialias: true
-Xft.hinting: true
-Xft.hintstyle: hintslight
+!Xft.autohint: true
+!Xft.antialias: true
+!Xft.hinting: true
+!Xft.hintstyle: hintslight
 !Xft.dpi: 96
-Xft.rgba: rgb
-Xft.lcdfilter: lcddefault
+!Xft.rgba: rgb
+!Xft.lcdfilter: lcddefault
 
 ! xscreensaver ---------------------------------------------------------------
 
